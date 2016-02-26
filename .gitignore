@@ -5,3 +5,5 @@ dist
 /.idea/
 .nvmrc
 tmp/
+
+.vscode/settings.json

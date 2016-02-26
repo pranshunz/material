@@ -220,6 +220,7 @@ function MdAutocomplete () {
       }
 
       function getInputElement () {
+        var validators = attr.mdValidators ? attr.mdValidators : "" 
         if (attr.mdFloatingLabel) {
           return '\
             <md-input-container flex ng-if="floatingLabel">\
@@ -229,6 +230,7 @@ function MdAutocomplete () {
                   id="{{ inputId || \'fl-input-\' + $mdAutocompleteCtrl.id }}"\
                   name="{{inputName}}"\
                   autocomplete="off"\
+                  ' + validators + '\
                   ng-required="$mdAutocompleteCtrl.isRequired"\
                   ng-minlength="inputMinlength"\
                   ng-maxlength="inputMaxlength"\
