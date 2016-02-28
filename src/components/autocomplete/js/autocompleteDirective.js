@@ -255,6 +255,7 @@ function MdAutocomplete () {
                 name="{{inputName}}"\
                 ng-if="!floatingLabel"\
                 autocomplete="off"\
+                ' + validators + '\
                 ng-required="$mdAutocompleteCtrl.isRequired"\
                 ng-disabled="$mdAutocompleteCtrl.isDisabled"\
                 ng-model="$mdAutocompleteCtrl.scope.searchText"\
